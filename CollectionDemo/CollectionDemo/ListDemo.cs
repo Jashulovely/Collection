@@ -50,6 +50,38 @@ namespace CollectionDemo
             {
                 Console.WriteLine(item);
             }
+            listDouble.Remove(11.11);
+            Console.WriteLine();
+            foreach (var item in listDouble)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            listDouble.RemoveAt(1);
+            foreach (var item in listDouble)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            listDouble.Reverse();
+            foreach (var item in listDouble)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            listDouble.Add(11.11);
+            listDouble.Add(22.22);
+            listDouble.Add(33.33);
+            listDouble.Add(44.44);
+            listDouble.RemoveRange(1, 3);
+            foreach (var item in listDouble)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine(listDouble.Count);
+
+
         }
     }
 }
