@@ -10,9 +10,36 @@ namespace CollectionDemo
     {
         static void Main(string[] args)
         {
-            ListDemo listDemo = new ListDemo();
-            listDemo.Lists();
-            Console.ReadLine();
+            bool interested = true;
+            while (interested)
+            {
+                Console.WriteLine("Enter Choice :\n   1   -->   List Demo.\n   2   -->   Array Demo.\n" +
+                    "   3   -->   Two D array.\n   0   -->   QUIT.");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        ListDemo listDemo = new ListDemo();
+                        listDemo.Lists();
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        ArrayDemo arrayDemo = new ArrayDemo();
+                        arrayDemo.AddElement();
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        TwoDArrayDemo twoDArrayDemo = new TwoDArrayDemo();
+                        twoDArrayDemo.AddElement();
+                        Console.ReadLine();
+                        break;
+                    case 0:
+                        interested = false;
+                        Console.WriteLine("Thanks for your ineterest.");
+                        Console.ReadLine();
+                        break;
+                }
+            }
         }
     }
 }
